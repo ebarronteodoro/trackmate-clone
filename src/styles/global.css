@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@import "tailwindcss-animated";
+
+@theme {
+  --font-poppins-extralight: 'poppins-extralight', 'sans-serif';
+  --font-poppins: 'poppins', 'sans-serif';
+  --font-questrial: 'questrial', 'sans-serif';
+}
