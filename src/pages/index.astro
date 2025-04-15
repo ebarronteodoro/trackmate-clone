@@ -3,6 +3,9 @@ import Image from "astro/components/Image.astro";
 import HeroSection from "../components/HeroSection.astro";
 import InfoSection from "../components/InfoSection.astro";
 import Layout from "../layouts/Layout.astro";
+import ParallaxSection from "../components/ParallaxSection.astro";
+import StyleSection from "../components/StyleSection.astro";
+import AdviceSection from "../components/AdviceSection.astro";
 ---
 
 <Layout
@@ -12,30 +15,13 @@ import Layout from "../layouts/Layout.astro";
 	<main>
 		<HeroSection />
 		<InfoSection />
-		<section
-			class="relative min-h-screen flex flex-col mt-4 items-center bg-[#222323] [mask-image:linear-gradient(transparent,black_20%)]"
-		>
-			<div
-				class="w-full flex flex-col min-h-dvh space-y-10 justify-center text-white text-right px-24"
-			>
-				<h2>
-					<Image
-						src="/images/hero.png"
-						alt="TrackMate"
-						class="absolute top-0 left-0 w-full h-full object-cover opacity-10"
-						loading="lazy"
-						width={1920}
-						height={1080}
-					/>
-					SISTEMA DE AVISOS
-				</h2>
-				<p>Recordatorios útiles para estar al día</p>
-				<p>
-					Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es
-					fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu
-					contenido y cambiar la fuente.
-				</p>
-			</div>
+		<AdviceSection />
+		<StyleSection />
+		<ParallaxSection />
+		<section class="min-h-dvh">
+			<h2>
+				0.4 TrackMate XE Especificaciones
+			</h2>
 		</section>
 	</main>
 </Layout>

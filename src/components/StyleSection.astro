@@ -1,0 +1,52 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<section class="min-h-dvh flex flex-col py-24">
+  <h2
+    class="text-5xl font-poppins-extralight font-bold w-[70%] mx-auto leading-[1.2] text-pretty flex flex-col gap-4 items-center"
+  >
+    <Image
+      src="/images/icons/icon-eye.png"
+      alt="TrackMate Icon Eye"
+      class="size-16"
+      loading="lazy"
+      width={50}
+      height={50}
+    />
+    Pulseras que van con tu estilo
+  </h2>
+  <p class="w-1/2 font-questrial leading-[1.6] text-pretty max-w-[640px] mx-auto text-center mt-6">
+    Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Haz
+    clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar
+    la fuente.
+  </p>
+  <picture class="relative flex w-full -mt-12">
+    <figure class="w-full">
+      <Image
+        src="/images/index/trackmate-bg.webp"
+        alt="Reloj 0.4 TrackMate XE"
+        loading="lazy"
+        width={720}
+        height={710}
+        class="h-full w-[150dvw] object-cover"
+      />
+    </figure>
+    <figure class="w-3/5 absolute top-0 left-1/2 z-10 transform -translate-x-1/2">
+      <Image
+        src="/images/index/trackmates.webp"
+        alt="Reloj 0.4 TrackMate XE"
+        loading="lazy"
+        width={720}
+        height={710}
+        class="w-full h-auto object-contain"
+      />
+    </figure>
+  </picture>
+  <a
+    class="bg-[#a238ff] shadow-[0px_1px_20px_0px_rgba(125,43,196,1)] transition duration-300 hover:bg-white hover:text-black w-36 h-10 flex items-center justify-center rounded-full font-questrial animate-fade-up animate-delay-400 mx-auto mt-32"
+    href="/product-page"
+  >
+    Comprar ahora
+  </a>
+</section>

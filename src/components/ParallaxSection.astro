@@ -1,0 +1,65 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<section
+  class="min-h-dvh flex flex-col justify-center bg-[url('/images/index/notifications-bg.webp')] bg-cover bg-no-repeat bg-center px-24 space-y-4"
+  id="notifications-section"
+>
+  <h2
+    class="mt-10 text-[14px] tracking-[0.3em] uppercase font-questrial flex items-center gap-4 ml-14"
+  >
+    <Image
+      src="/images/icons/icon-notifications.png"
+      alt="TrackMate Icon Notifications"
+      class="size-16"
+      loading="lazy"
+      width={50}
+      height={50}
+    />
+    SISTEMA DE ALERTAS
+  </h2>
+  <p
+    class="text-5xl font-poppins-extralight font-bold w-[40%] leading-[1.2] text-balance ml-14"
+  >
+    Deja que tu cuerpo te guíe
+  </p>
+  <p class="w-1/2 font-questrial leading-[1.6] text-pretty max-w-[430px] ml-14">
+    Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Haz
+    clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar
+    la fuente.
+  </p>
+</section>
+
+<script>
+  const notificationsSection = document.querySelector("#notifications-section");
+
+  let isVisible = false;
+
+  function updateBackground() {
+    if (!notificationsSection) return;
+    const rect = notificationsSection.getBoundingClientRect();
+    const offset = -rect.top * 0.5; // El factor 0.5 hace que el movimiento sea más suave
+    notificationsSection.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        isVisible = entry.isIntersecting;
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  observer.observe(notificationsSection);
+
+  function animate() {
+    if (isVisible) {
+      updateBackground();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>

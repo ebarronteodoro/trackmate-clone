@@ -1,0 +1,56 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<section class="relative min-h-screen flex flex-col mt-4 items-center">
+  <div aria-hidden="true" class="absolute inset-0 mt-5 flex w-full gap-10">
+    <div
+      class="basis-1/4 h-full bg-[url('/images/index/advice-bg.webp')] bg-no-repeat bg-cover bg-center bg-fixed"
+    >
+    </div>
+    <div
+      class="basis-3/4 h-full bg-[url('/images/index/advice-bg-2.webp')] bg-no-repeat bg-cover bg-center"
+    >
+    </div>
+  </div>
+  <header
+    class="relative z-10 w-3/5 ml-auto flex flex-col min-h-dvh space-y-10 justify-center text-white px-24"
+    role="banner"
+  >
+    <h2
+      class="mt-10 text-[14px] tracking-[0.3em] uppercase font-questrial flex items-center gap-4"
+    >
+      <Image
+        src="/images/icons/icon-message.png"
+        alt="TrackMate Icon Message"
+        class="size-16"
+        loading="lazy"
+        width={50}
+        height={50}
+      />
+      SISTEMA DE AVISOS
+    </h2>
+    <p
+      class="w-4/5 text-5xl font-poppins-extralight font-bold leading-[1.2] text-pretty"
+    >
+      Recordatorios útiles para estar al día
+    </p>
+    <p class="w-4/5 font-questrial leading-[1.6] text-pretty max-w-[480px]">
+      Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil.
+      Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y
+      cambiar la fuente.
+    </p>
+  </header>
+  <figure
+    class="absolute top-1/2 left-32 w-[30%] transform -translate-y-[40%] h-auto object-contain animate-fade-up animate-delay-200"
+  >
+    <Image
+      src="/images/index/advice-trackmate.webp"
+      alt="Reloj 0.4 TrackMate XE"
+      loading="lazy"
+      width={350}
+      height={480}
+      class="w-full h-auto object-contain"
+    />
+  </figure>
+</section>
