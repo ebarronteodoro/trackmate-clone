@@ -1,5 +1,7 @@
 ---
+import Image from "astro/components/Image.astro";
 import HeroSection from "../components/HeroSection.astro";
+import InfoSection from "../components/InfoSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -9,25 +11,25 @@ import Layout from "../layouts/Layout.astro";
 >
 	<main>
 		<HeroSection />
-		<section class="relative min-h-screen flex flex-col items-center [mask-image:linear-gradient(transparent,black_15%)]">
-			<div class="absolute inset-0 flex w-full gap-10">
-				<div
-					class="basis-2/3 h-full bg-[linear-gradient(to_top,rgba(0,0,0,0.7),rgba(0,0,0,0)),url('/images/index/info-person.jpg')] bg-no-repeat bg-cover bg-center"
-				>
-				</div>
-				<div
-					class="basis-1/3 h-full bg-[linear-gradient(to_top,rgba(0,0,0,0.7),rgba(0,0,0,0)),url('/images/index/info-bg.png')] bg-no-repeat bg-cover bg-center"
-				>
-				</div>
-			</div>
-			<div class="relative z-10">
-				<div>
-					<img src="" alt="" />
-					<h2 class="mt-10 text-3xl text-center">
-						MONITOREAR EL ENTRENAMIENTO
-					</h2>
-				</div>
-				<p>Afina tu rutina con números exactos en tu ejercicio</p>
+		<InfoSection />
+		<section
+			class="relative min-h-screen flex flex-col mt-4 items-center bg-[#222323] [mask-image:linear-gradient(transparent,black_20%)]"
+		>
+			<div
+				class="w-full flex flex-col min-h-dvh space-y-10 justify-center text-white text-right px-24"
+			>
+				<h2>
+					<Image
+						src="/images/hero.png"
+						alt="TrackMate"
+						class="absolute top-0 left-0 w-full h-full object-cover opacity-10"
+						loading="lazy"
+						width={1920}
+						height={1080}
+					/>
+					SISTEMA DE AVISOS
+				</h2>
+				<p>Recordatorios útiles para estar al día</p>
 				<p>
 					Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es
 					fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu
