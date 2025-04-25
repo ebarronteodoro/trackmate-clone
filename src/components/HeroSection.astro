@@ -3,24 +3,24 @@ import Image from "astro/components/Image.astro";
 ---
 
 <section
-  class="bg-[url('/images/index/hero-background.webp')] bg-cover [mask-image:linear-gradient(black_60%,transparent)] min-h-screen flex flex-col justify-center text-white text-left relative"
+  class="bg-[url('/images/index/hero-background.webp')] bg-cover [mask-image:linear-gradient(black_60%,transparent)] min-h-dvh flex flex-col md:justify-center text-white text-left relative"
 >
   <div
-    class="bg-[rgba(34,35,35,0.6)] shadow-[50px_-0px_50px_50px_rgba(34,35,35,0.6)] w-full relative z-10 px-24 space-y-4"
+    class="bg-[rgba(34,35,35,0.6)] shadow-[50px_-0px_50px_50px_rgba(34,35,35,0.6)] w-full relative z-10 px-8 md:px-24 space-y-4 mt-28 md:mt-0"
   >
-    <p class="font-poppins-extralight text-2xl font-bold animate-fade-up">
+    <p class="font-poppins-extralight text-center md:text-left text-2xl font-bold animate-fade-up">
       Crea tu rutina diaria
     </p>
     <h1
-      class="font-poppins-extralight text-7xl font-bold animate-fade-up animate-delay-100"
+      class="font-poppins-extralight text-center md:text-left text-[2.45rem] md:text-7xl font-bold animate-fade-up animate-delay-100"
     >
       0.4 TrackMate XE
     </h1>
-    <p class="font-questrial text-2xl animate-fade-up animate-delay-300">
+    <p class="font-questrial text-center md:text-left text-[1.3rem] md:text-2xl animate-fade-up animate-delay-300">
       Un monitor de la salud que te motiva en todo momento
     </p>
     <a
-      class="bg-[#a238ff] shadow-[0px_1px_20px_0px_rgba(125,43,196,1)] transition duration-300 hover:bg-white hover:text-black w-36 h-10 flex items-center justify-center rounded-full font-questrial animate-fade-up animate-delay-400"
+      class="bg-[#a238ff] shadow-[0px_1px_20px_0px_rgba(125,43,196,1)] mx-auto md:mx-0 transition duration-300 hover:bg-white hover:text-black w-36 h-10 flex items-center justify-center rounded-full font-questrial animate-fade-up animate-delay-400"
       href="/product-page">Comprar ahora</a
     >
   </div>
@@ -29,7 +29,7 @@ import Image from "astro/components/Image.astro";
     width={720}
     height={710}
     alt="Reloj 0.4 TrackMate XE"
-    class="rotate-[350deg] absolute top-1/2 right-32 w-4/11 transform -translate-y-1/2 h-auto object-contain animate-fade-up animate-delay-200"
+    class="rotate-12 md:rotate-[350deg] mx-auto md:mx-0 mt-8 md:mt-0 md:absolute md:top-1/2 md:right-32 w-2/3 md:w-4/11 md:transform md:-translate-y-1/2 h-auto object-contain animate-fade-up animate-delay-200"
     loading="eager"
   />
 </section>
